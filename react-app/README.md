@@ -1,4 +1,4 @@
-# 参考react中文教程
+# 参考React中文教程
 构建一个交互式的 tic-tac-toe(井字棋) 游戏     
 具体教程地址：http://www.css88.com/react/tutorial/tutorial.html    
 在线演示地址：https://codepen.io/gaearon/pen/VbvBWg?editors=0010
