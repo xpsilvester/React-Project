@@ -88,3 +88,30 @@ a{
 	width: 10%;
 	color: #fff;
 }
+
+.demoList > div{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 50px;
+}
+.timer{
+	width: 100%;
+	text-align: center;
+	margin: 50px 0;
+}
+.todo{
+	width: 100%;
+	text-align: center;
+}
+.MarkdownEditor{
+	width: 100%;
+	text-align: center;
+}
+.MarkdownEditor textarea{
+	width: 30%;
+	height: 100px;
+}
+.community{
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+}

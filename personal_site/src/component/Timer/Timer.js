@@ -22,8 +22,9 @@ export default class Timer extends Component {
 
     render() {
         return (
-            <div>
-                This is Timer!  Seconds: {this.state.seconds}
+            <div className="timer">
+            	<h3>Timer</h3>
+                <p>Seconds: {this.state.seconds}</p>
             </div>
         )
     }
