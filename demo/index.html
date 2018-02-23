@@ -6,13 +6,56 @@
     <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
     <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
     <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="style.css"  />
   </head>
   <body>
-    <div id="example"></div>
+    <div id="container"></div>
     <script type="text/babel">
+      class HelloMessage extends React.Component{
+        render(){
+          return (
+            <div>
+              Hello {this.props.name}
+            </div>
+          )
+        }
+      }
+      class NavLeft extends React.Component{
+        render(){
+          return(
+            <div className="navLeft">
+              <p>中文文档</p>
+              <p>中文教程</p>
+              <p>社区</p>
+              <p>博客</p>
+            </div>
+          )
+        }
+      }
+      class NavRight extends React.Component{
+        render(){
+          return(
+            <div className="navRight">
+              <p>搜索文档</p>
+              <p>v16.2.0</p>
+              <p>Github</p>
+            </div>
+          )
+        }
+      }
+      class Nav extends React.Component{
+        render(){
+          return(
+            <div className="nav">
+              <NavLeft />
+              <NavRight />
+            </div>
+          )
+        }
+      }
       ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
+        <Nav />,
+        document.getElementById('container')
       );
     </script>
   </body>
