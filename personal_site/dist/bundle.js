@@ -26849,111 +26849,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var NavLeft = function (_Component) {
-	_inherits(NavLeft, _Component);
-
-	function NavLeft() {
-		_classCallCheck(this, NavLeft);
-
-		return _possibleConstructorReturn(this, (NavLeft.__proto__ || Object.getPrototypeOf(NavLeft)).apply(this, arguments));
-	}
-
-	_createClass(NavLeft, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				{ className: "navLeft" },
-				_react2.default.createElement(
-					"p",
-					null,
-					"\u4E2D\u6587\u6587\u6863"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"\u4E2D\u6587\u6559\u7A0B"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"\u793E\u533A"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"\u535A\u5BA2"
-				)
-			);
-		}
-	}]);
-
-	return NavLeft;
-}(_react.Component);
-
-var NavRight = function (_Component2) {
-	_inherits(NavRight, _Component2);
-
-	function NavRight() {
-		_classCallCheck(this, NavRight);
-
-		return _possibleConstructorReturn(this, (NavRight.__proto__ || Object.getPrototypeOf(NavRight)).apply(this, arguments));
-	}
-
-	_createClass(NavRight, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				{ className: "navRight" },
-				_react2.default.createElement(
-					"p",
-					null,
-					"\u641C\u7D22\u6587\u6863"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"v16.2.0"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"Github"
-				)
-			);
-		}
-	}]);
-
-	return NavRight;
-}(_react.Component);
-
-var Nav = function (_Component3) {
-	_inherits(Nav, _Component3);
-
-	function Nav() {
-		_classCallCheck(this, Nav);
-
-		return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
-	}
-
-	_createClass(Nav, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				"div",
-				{ className: "nav" },
-				_react2.default.createElement(NavLeft, null),
-				_react2.default.createElement(NavRight, null)
-			);
-		}
-	}]);
-
-	return Nav;
-}(_react.Component);
-
-var Banner = function (_Component4) {
-	_inherits(Banner, _Component4);
+var Banner = function (_Component) {
+	_inherits(Banner, _Component);
 
 	function Banner() {
 		_classCallCheck(this, Banner);
@@ -26984,8 +26881,8 @@ var Banner = function (_Component4) {
 	return Banner;
 }(_react.Component);
 
-var Content = function (_Component5) {
-	_inherits(Content, _Component5);
+var Content = function (_Component2) {
+	_inherits(Content, _Component2);
 
 	function Content() {
 		_classCallCheck(this, Content);
@@ -27036,8 +26933,8 @@ var Content = function (_Component5) {
 	return Content;
 }(_react.Component);
 
-var Footer = function (_Component6) {
-	_inherits(Footer, _Component6);
+var Footer = function (_Component3) {
+	_inherits(Footer, _Component3);
 
 	function Footer() {
 		_classCallCheck(this, Footer);
@@ -27092,8 +26989,8 @@ var Footer = function (_Component6) {
 	return Footer;
 }(_react.Component);
 
-var Home = function (_Component7) {
-	_inherits(Home, _Component7);
+var Home = function (_Component4) {
+	_inherits(Home, _Component4);
 
 	function Home() {
 		_classCallCheck(this, Home);
@@ -35361,7 +35258,7 @@ exports = module.exports = __webpack_require__(44)(false);
 
 
 // module
-exports.push([module.i, "body {\r\n  font: 14px \"Century Gothic\", Futura, sans-serif;\r\n  margin: 20px;\r\n}\r\n\r\n.board-row:after {\r\n  clear: both;\r\n  content: \"\";\r\n  display: table;\r\n}\r\n\r\n.status {\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.square {\r\n  background: #fff;\r\n  border: 1px solid #999;\r\n  float: left;\r\n  font-size: 24px;\r\n  font-weight: bold;\r\n  line-height: 34px;\r\n  height: 34px;\r\n  margin-right: -1px;\r\n  margin-top: -1px;\r\n  padding: 0;\r\n  text-align: center;\r\n  width: 34px;\r\n}\r\n\r\n.square:focus {\r\n  outline: none;\r\n}\r\n\r\n.kbd-navigation .square:focus {\r\n  background: #ddd;\r\n}\r\n\r\n.game {\r\n  width: 30%;\r\n  margin: 70px auto;\r\n}\r\n\r\n.game-board{\r\n  margin: 0 auto;\r\n  width: 99px;\r\n}\r\n.game-info{\r\n  width: 335px;\r\n}\r\n.game-info p{\r\n  padding-left: 35px;\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n  font: 14px \"Century Gothic\", Futura, sans-serif;\r\n  margin: 20px;\r\n}\r\n\r\n.board-row:after {\r\n  clear: both;\r\n  content: \"\";\r\n  display: table;\r\n}\r\n\r\n.status {\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.square {\r\n  background: #fff;\r\n  border: 1px solid #999;\r\n  float: left;\r\n  font-size: 24px;\r\n  font-weight: bold;\r\n  line-height: 34px;\r\n  height: 34px;\r\n  margin-right: -1px;\r\n  margin-top: -1px;\r\n  padding: 0;\r\n  text-align: center;\r\n  width: 34px;\r\n}\r\n\r\n.square:focus {\r\n  outline: none;\r\n}\r\n\r\n.kbd-navigation .square:focus {\r\n  background: #ddd;\r\n}\r\n\r\n.game {\r\n  width: 30%;\r\n  margin: 70px auto;\r\n}\r\n\r\n.game-board{\r\n  margin: 0 auto;\r\n  width: 99px;\r\n}\r\n.game-info{\r\n  width: 99px;\r\n  margin: 0 auto;\r\n}\r\n", ""]);
 
 // exports
 
@@ -35570,7 +35467,7 @@ exports = module.exports = __webpack_require__(44)(false);
 
 
 // module
-exports.push([module.i, "body,ul,p,li{\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\tfont-size: 14px;\r\n\tlist-style: none;\r\n}\r\na{\r\n\ttext-decoration: none;\r\n}\r\n.nav{\r\n\theight: 45px;\r\n\twidth: 100%;\r\n\tbackground: #20232b;\r\n}\r\n.nav p{\r\n\tfloat: left;\r\n\tcolor: #fff;\r\n\twidth: 20%;\r\n\tline-height: 45px;\r\n\tfont-size: 16px;\r\n\ttext-align: center;\r\n}\r\n.nav a{\r\n\tcolor: #fff;\r\n}\r\n.navLeft{\r\n\twidth: 50%;\r\n\theight: 45px;\r\n\tfloat: left;\r\n\tmargin-left: 10%;\r\n}\r\n\r\n.navRight{\r\n\twidth: 30%;\r\n\theight: 45px;\r\n\tfloat: right;\r\n\tpadding-left:10%; \r\n}\r\n.banner{\r\n\twidth: 100%;\r\n\theight: 400px;\r\n\tbackground: #282d34;\r\n}\r\n.banner h3{\r\n\tcolor: #61dafb;\r\n    text-align: center;\r\n    margin: 0;\r\n    padding-top:100px;\r\n    font-size: 45px;\r\n    letter-spacing: 0.01em;\r\n}\r\n.banner h4{\r\n\tpadding-top: 15px;\r\n    text-align: center;\r\n    font-size: 24px;\r\n    letter-spacing: 0.01em;\r\n    font-weight: 200;\r\n    color: #fff;\r\n}\r\n.content{\r\n\twidth: 100%;\r\n}\r\n.content h4{\r\n\tfont-size: 24px;\r\n\tmargin:30px auto;\r\n\twidth: 30%;\r\n\ttext-align: center;\r\n}\r\n.content p{\r\n\tfont-size: 18px;\r\n\twidth: 30%;\r\n\tmargin: 20px auto;\r\n}\r\n.footer{\r\n\twidth: 100%;\r\n\theight: 40px;\r\n\tpadding-top: 20px;\r\n\tbackground: #20232b;\r\n}\r\n.footer p{\r\n\tcolor: #999;\r\n\tfloat: left;\r\n\twidth: 40%;\r\n\ttext-align: center;\r\n}\r\n.footer ul li{\r\n\tfloat: left;\r\n\twidth: 10%;\r\n\tcolor: #fff;\r\n}\r\n\r\n.demoList > div{\r\n\tborder-bottom: 1px solid #ccc;\r\n\tpadding-bottom: 50px;\r\n}\r\n.timer{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tmargin: 50px 0;\r\n}\r\n.todo{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n}\r\n.MarkdownEditor{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n}\r\n.MarkdownEditor textarea{\r\n\twidth: 30%;\r\n\theight: 100px;\r\n}\r\n.community{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tline-height: 40px;\r\n}", ""]);
+exports.push([module.i, "body,ul,p,li,ol{\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n\tfont-size: 14px;\r\n\tlist-style: none;\r\n}\r\na{\r\n\ttext-decoration: none;\r\n}\r\n.nav{\r\n\theight: 45px;\r\n\twidth: 100%;\r\n\tbackground: #20232b;\r\n}\r\n.nav p{\r\n\tfloat: left;\r\n\tcolor: #fff;\r\n\twidth: 20%;\r\n\tline-height: 45px;\r\n\tfont-size: 16px;\r\n\ttext-align: center;\r\n}\r\n.nav a{\r\n\tcolor: #fff;\r\n}\r\n.navLeft{\r\n\twidth: 50%;\r\n\theight: 45px;\r\n\tfloat: left;\r\n\tmargin-left: 10%;\r\n}\r\n\r\n.navRight{\r\n\twidth: 30%;\r\n\theight: 45px;\r\n\tfloat: right;\r\n\tpadding-left:10%; \r\n}\r\n.banner{\r\n\twidth: 100%;\r\n\theight: 400px;\r\n\tbackground: #282d34;\r\n}\r\n.banner h3{\r\n\tcolor: #61dafb;\r\n    text-align: center;\r\n    margin: 0;\r\n    padding-top:100px;\r\n    font-size: 45px;\r\n    letter-spacing: 0.01em;\r\n}\r\n.banner h4{\r\n\tpadding-top: 15px;\r\n    text-align: center;\r\n    font-size: 24px;\r\n    letter-spacing: 0.01em;\r\n    font-weight: 200;\r\n    color: #fff;\r\n}\r\n.content{\r\n\twidth: 100%;\r\n}\r\n.content h4{\r\n\tfont-size: 24px;\r\n\tmargin:30px auto;\r\n\twidth: 30%;\r\n\ttext-align: center;\r\n}\r\n.content p{\r\n\tfont-size: 18px;\r\n\twidth: 30%;\r\n\tmargin: 20px auto;\r\n}\r\n.footer{\r\n\twidth: 100%;\r\n\theight: 40px;\r\n\tpadding-top: 20px;\r\n\tbackground: #20232b;\r\n}\r\n.footer p{\r\n\tcolor: #999;\r\n\tfloat: left;\r\n\twidth: 40%;\r\n\ttext-align: center;\r\n}\r\n.footer ul li{\r\n\tfloat: left;\r\n\twidth: 10%;\r\n\tcolor: #fff;\r\n}\r\n\r\n.demoList > div{\r\n\tborder-bottom: 1px solid #ccc;\r\n\tpadding-bottom: 50px;\r\n}\r\n.timer{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tmargin: 50px 0;\r\n}\r\n.todo{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n}\r\n.MarkdownEditor{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n}\r\n.MarkdownEditor textarea{\r\n\twidth: 30%;\r\n\theight: 100px;\r\n}\r\n.community{\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tline-height: 40px;\r\n}", ""]);
 
 // exports
 

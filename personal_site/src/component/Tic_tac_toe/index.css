@@ -46,8 +46,6 @@ body {
   width: 99px;
 }
 .game-info{
-  width: 335px;
-}
-.game-info p{
-  padding-left: 35px;
+  width: 99px;
+  margin: 0 auto;
 }
