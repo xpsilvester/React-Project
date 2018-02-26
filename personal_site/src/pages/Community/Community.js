@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Tic_tac_toe from '../../component/Tic_tac_toe/Tic_tac_toe';
 
-export default class Page1 extends Component {
+export default class Community extends Component {
     render() {
         return (
             <div className="community">

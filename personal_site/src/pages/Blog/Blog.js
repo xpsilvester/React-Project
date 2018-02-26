@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
+import TestData from '../../component/Data/TestData';
 
-export default class Page1 extends Component {
+export default class Blog extends Component {
     render() {
         return (
             <div>
-                this is Blog~
+                数据库测试：
+                <TestData />
             </div>
         )
     }

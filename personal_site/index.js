@@ -6,6 +6,10 @@ var config = require('./webpack.dev.config.js');
 var compiler = webpack(config);
 var app = express();
 
+//路由管理
+var test=require('./routes/test');
+app.use('/test',test);
+
 // 引入webpack组件
 app.use(WebpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
