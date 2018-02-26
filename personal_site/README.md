@@ -1,5 +1,5 @@
 # personal_site
-学习React过程中的一些页面组装练习
+使用React+Webpack+Express开发页面
 
 ##### npm install 下载所需要的依赖包
 ##### 1.开发端运行，然后npm start打开浏览器localhost:8080调试
