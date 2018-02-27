@@ -19,18 +19,18 @@ app.use(WebpackHotMiddleware(compiler));
 
 var router = express.Router();
 router.get('/', function (req, res, next) {
-  res.sendfile('./public/index.html'); // 发送静态文件
+  res.sendFile(__dirname + '/public/index.html'); // 发送静态文件
 });
 router.get('/login', function (req, res, next) {
-  res.sendfile('./public/login_register.html'); // 发送静态文件
+  res.sendFile(__dirname + '/public/login_register.html'); // 发送静态文件
 });
 router.get('/register', function (req, res, next) {
-  res.sendfile('./public/login_register.html');
+  res.sendFile(__dirname + '/public/login_register.html');
 });
 
 // 根目录下的所有404错误，引向index.html页面，让react-router进行解析
 router.get('/*', function(req, res){
-  res.sendfile('./public/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 app.use(router);
 
