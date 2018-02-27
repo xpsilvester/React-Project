@@ -2,10 +2,24 @@ import React, {Component} from 'react';
 
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
-import Home from '../pages/Home/Home';
-import Page1 from '../pages/Page1/Page1';
-import Community from '../pages/Community/Community';
-import Blog from '../pages/Blog/Blog';
+import Bundle from './Bundle';
+
+import Home from 'bundle-loader?lazy&name=home!../pages/Home/Home';
+import Page1 from 'bundle-loader?lazy&name=page1!../pages/Page1/Page1';
+import Community from 'bundle-loader?lazy&name=community!../pages/Community/Community';
+import Blog from 'bundle-loader?lazy&name=blog!../pages/Blog/Blog';
+
+const Loading = function () {
+    return <div>Loading...</div>
+};
+
+const createComponent = (component) => (props) => (
+    <Bundle load={component}>
+        {
+            (Component) => Component ? <Component {...props} /> : <Loading/>
+        }
+    </Bundle>
+);
 
 const getRouter = () => (
     <Router>
@@ -14,8 +28,8 @@ const getRouter = () => (
                 <div className="navLeft">
                   <p><Link to="/">首页</Link></p>
                   <p><Link to="/page1">Page1</Link></p>
-                  <p><Link to="/Community">社区</Link></p>
-                  <p><Link to="/Blog">博客</Link></p>
+                  <p><Link to="/community">社区</Link></p>
+                  <p><Link to="/blog">博客</Link></p>
                 </div>
                 <div className="navRight">
                   <p>搜索文档</p>
@@ -24,10 +38,10 @@ const getRouter = () => (
                 </div>
             </div>
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/page1" component={Page1}/>
-                <Route path="/Community" component={Community}/>
-                <Route path="/Blog" component={Blog}/>
+                <Route exact path="/" component={createComponent(Home)}/>
+                <Route path="/page1" component={createComponent(Page1)}/>
+                <Route path="/community" component={createComponent(Community)}/>
+                <Route path="/blog" component={createComponent(Blog)}/>
             </Switch>
         </div>
     </Router>

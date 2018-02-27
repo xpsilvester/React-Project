@@ -21,11 +21,20 @@ module.exports = {
         {
             test: /\.scss$/,
             use: ['style-loader','css-loader','sass-loader']
+        },
+        {
+            test: /\.(png|jpg|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    limit: 8192
+                }
+            }]
         }]
 	},
     /*输出到dist文件夹，输出文件名字为bundle.js*/
     output: {
-        path: path.join(__dirname, './pubilc/javascripts'),
+        path: path.join(__dirname, './public/javascripts'),
         filename: 'bundle.js'
     },
     devServer: {
