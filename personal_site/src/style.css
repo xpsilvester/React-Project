@@ -1,0 +1,118 @@
+body,ul,p,li,ol{
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.nav{
+	height: 45px;
+	width: 100%;
+	background: #20232b;
+}
+.nav p{
+	float: left;
+	color: #fff;
+	width: 20%;
+	line-height: 45px;
+	font-size: 16px;
+	text-align: center;
+}
+.nav a{
+	color: #fff;
+}
+.navLeft{
+	width: 50%;
+	height: 45px;
+	float: left;
+	margin-left: 10%;
+}
+
+.navRight{
+	width: 30%;
+	height: 45px;
+	float: right;
+	padding-left:10%; 
+}
+.banner{
+	width: 100%;
+	height: 400px;
+	background: #282d34;
+}
+.banner h3{
+	color: #61dafb;
+    text-align: center;
+    margin: 0;
+    padding-top:100px;
+    font-size: 45px;
+    letter-spacing: 0.01em;
+}
+.banner h4{
+	padding-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    font-weight: 200;
+    color: #fff;
+}
+.content{
+	width: 100%;
+	min-height: 410px;
+}
+.content h4{
+	font-size: 24px;
+	margin:30px auto;
+	width: 30%;
+	text-align: center;
+}
+.content p{
+	font-size: 18px;
+	width: 30%;
+	margin: 20px auto;
+}
+.footer{
+	width: 100%;
+	height: 40px;
+	padding-top: 20px;
+	background: #20232b;
+}
+.footer p{
+	color: #999;
+	float: left;
+	width: 40%;
+	text-align: center;
+}
+.footer ul li{
+	float: left;
+	width: 10%;
+	color: #fff;
+}
+
+.demoList > div{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 50px;
+}
+.timer{
+	width: 100%;
+	text-align: center;
+	margin: 50px 0;
+}
+.todo{
+	width: 100%;
+	text-align: center;
+}
+.MarkdownEditor{
+	width: 100%;
+	text-align: center;
+}
+.MarkdownEditor textarea{
+	width: 30%;
+	height: 100px;
+}
+.community{
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+}

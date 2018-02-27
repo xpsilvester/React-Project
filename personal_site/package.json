@@ -23,6 +23,7 @@
     "file-loader": "^1.1.10",
     "jquery": "^3.3.1",
     "node-sass": "^4.7.2",
+    "pm2": "^2.10.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
