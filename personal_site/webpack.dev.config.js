@@ -17,11 +17,15 @@ module.exports = {
 		{
 			test: /\.css$/,
 			use: ['style-loader', 'css-loader']
-		}]
+		},
+        {
+            test: /\.scss$/,
+            use: ['style-loader','css-loader','sass-loader']
+        }]
 	},
     /*输出到dist文件夹，输出文件名字为bundle.js*/
     output: {
-        path: path.join(__dirname, './dist'),
+        path: path.join(__dirname, './pubilc/javascripts'),
         filename: 'bundle.js'
     },
     devServer: {

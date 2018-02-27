@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import getRouter from './router/router';
-import './style.css';
+import './scss/style.scss';
 
 if (module.hot) {
     module.hot.accept();
