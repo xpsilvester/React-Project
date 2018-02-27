@@ -59,6 +59,7 @@ a{
 }
 .content{
 	width: 100%;
+	min-height: 410px;
 }
 .content h4{
 	font-size: 24px;
