@@ -34,6 +34,7 @@ router.get('/*', function(req, res){
 });
 app.use(router);
 
-app.listen(3000, function () {
-  console.log('Listening on 3000');
-});
+// app.listen(3000, function () {
+//   console.log('Listening on 3000');
+// });
+module.exports = app;
