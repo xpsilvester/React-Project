@@ -11,19 +11,21 @@ var pool = mysql.createPool({
 function query(sql, callback) {
     pool.getConnection(function (err, connection) {
         // Use the connection
+        connection.connect();
         connection.query(sql, function (err, rows) {
             callback(err, rows);
-            connection.release();//释放链接
         });
+        connection.release();//释放链接
     });
 }
 function query(sql, data ,callback) {
     pool.getConnection(function (err, connection) {
         // Use the connection
+        connection.connect();
         connection.query(sql, data ,function (err, rows) {
             callback(err, rows);
-            connection.release();//释放链接
         });
+        connection.release();//释放链接
     });
 }
 exports.query = query;
