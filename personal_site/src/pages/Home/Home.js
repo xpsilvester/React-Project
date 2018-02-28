@@ -1,11 +1,38 @@
 import React, {Component} from 'react';
+import Slider from '../../component/Slider/Slider';
+
+const IMAGE_DATA = [
+  {
+    src: require('../../../public/images/demo1.jpg'),
+    alt: 'images-1',
+  },
+  {
+    src: require('../../../public/images/demo2.jpg'),
+    alt: 'images-2',
+  },
+  {
+    src: require('../../../public/images/demo3.jpg'),
+    alt: 'images-3',
+  },
+  {
+    src: require('../../../public/images/demo4.jpg'),
+    alt: 'images-4',
+  }
+];
 
 class Banner extends Component{
 	render(){
 	  return(
 	    <div className="banner">
-	    	<h3>React</h3>
-	    	<h4>用于构建用户界面的 JavaScript 库</h4>
+	    	<Slider
+				items={IMAGE_DATA}
+				speed={1.2}
+				delay={3}
+				pause={true}
+				autoplay={true}
+				dots={true}
+				arrows={true}
+			/>
 	    </div>
 	  )
 	}
