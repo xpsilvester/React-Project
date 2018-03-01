@@ -17,6 +17,10 @@ const IMAGE_DATA = [
   {
     src: require('../../../public/images/demo4.jpg'),
     alt: 'images-4',
+  },
+  {
+    src: require('../../../public/images/demo1.jpg'),
+    alt: 'images-5',
   }
 ];
 
@@ -29,7 +33,7 @@ class Banner extends Component{
 				speed={1.2}
 				delay={3}
 				pause={true}
-				autoplay={true}
+				autoplay={false}
 				dots={true}
 				arrows={true}
 			/>
