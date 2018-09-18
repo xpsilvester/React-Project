@@ -11,7 +11,8 @@ export default class Slider extends Component{
 		super(props);
 		this.state={
 			nowLocal:0,
-			speed:this.props.speed
+			speed:this.props.speed,
+			startX:0
 		};
 	}
 
@@ -21,10 +22,10 @@ export default class Slider extends Component{
 		
 		if(_n<0){
 			_n = _n + this.props.items.length;
-			this.setState({speed:0,nowLocal:_n});
+			this.setState({speed:0,nowLocal:_n},);
 			setTimeout(()=>{
 				this.setState({speed:this.props.speed,nowLocal:this.props.items.length-2});
-			},10)
+			},1);
 
 		}else if(_n>=this.props.items.length-1){
 			_n=this.props.items.length-1;
@@ -34,11 +35,31 @@ export default class Slider extends Component{
 			},this.props.speed*1000)
 
 		}else{
-
 			this.setState({speed:this.props.speed,nowLocal:_n});
 		}
 		
 	}
+	//触摸事件
+	onTouchStart(e){
+		this.pausePlay();
+		this.setState({startX:e.touches[0].clientX});
+		console.log('TouchStart:'+this.state.startX);
+	}
+	onTouchEnd(e){
+		let moveX = e.changedTouches[0].clientX - this.state.startX;
+		if( moveX > 20) {
+			this.turn(-1);
+		}else if(moveX < -20){
+			this.turn(1);
+		}
+		this.goPlay();
+		console.log('onTouchEnd:'+e.changedTouches[0].clientX);
+	}
+	onTouchMove(e){
+		this.pausePlay();
+		console.log('onTouchMove:'+ e.changedTouches[0].clientX);
+	}
+	
 	//开始自动轮播
 	goPlay(){
 		if(this.props.autoplay){
@@ -56,10 +77,11 @@ export default class Slider extends Component{
 	componentDidMount(){
 		this.goPlay();
 	}
-	
+
 	//组件将被卸载  
   	componentWillUnmount(){ 
         //重写组件的setState方法，直接返回空
+        console.log(this.state.nowLocal);
         this.setState = (state,callback)=>{
           return;
         };  
@@ -79,11 +101,15 @@ export default class Slider extends Component{
 		return (
 			<div
 				className="slider"
-				onMouseOver={this.props.pause?this.pausePlay.bind(this):null} onMouseOut={this.props.pause?this.goPlay.bind(this):null}>
+				onMouseOver={this.props.pause?this.pausePlay.bind(this):null} 
+				onMouseOut={this.props.pause?this.goPlay.bind(this):null}
+				onTouchStart={this.onTouchStart.bind(this)} 
+				onTouchEnd={this.onTouchEnd.bind(this)}
+				onTouchMove={this.onTouchMove.bind(this)}>
 				<ul style={{
-					left: -100 * this.state.nowLocal + "%",
-					transitionDuration: this.state.speed + "s",
-					width: this.props.items.length * 100 + "%"
+						left: -100 * this.state.nowLocal + "%",
+						transitionDuration: this.state.speed + "s",
+						width: this.props.items.length * 100 + "%"
 	            }}>
 					{itemNodes}
 				</ul>
